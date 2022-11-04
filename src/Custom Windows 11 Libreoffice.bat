@@ -9,7 +9,4 @@ GOTO START_SCRIPT
 	powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\scripts\change-drive-letter.ps1"
 	powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\scripts\startmenuw11.ps1"
 	powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\scripts\update.ps1"
-
-
-
-pause
+	EXIT
