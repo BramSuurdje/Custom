@@ -22,6 +22,8 @@ function Show-Menu {
     Write-Host "2: Windows 11 Custom Installeren"
     Write-Host "3: Press '3' for this option."
     Write-Host "Q: Press 'Q' to quit."
+
+    Write-Host "5: Libreoffice Verwijderen"
 }
 
 do
@@ -35,7 +37,9 @@ do
     } '2' {
     Start-Process "$PSScriptRoot\Custom Windows 11 Libreoffice.bat"
     } '3' {
-      'You chose option #3'
+    # insert code here
+    } '5' {
+    Start-Process "$PSScriptRoot\uninstall-libreoffice.bat"
     }
     }
     pause
