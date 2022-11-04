@@ -1,5 +1,5 @@
-Copy-Item -Path Z:\--Custom--\src\start.bin -Destination C:\Users\Gebruiker\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\LocalState -PassThru
-Copy-Item -Path Z:\--Custom--\src\start2.bin -Destination C:\Users\Gebruiker\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\LocalState -PassThru
+Copy-Item -Path $PSScriptRoot\start.bin -Destination C:\Users\$env:UserName\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\LocalState -PassThru
+Copy-Item -Path $PSScriptRoot\start2.bin -Destination C:\Users\$env:UserName\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\LocalState -PassThru
 
   #Restart Explorer, open the start menu (necessary to load the new layout), and give it a few seconds to process
   Stop-Process -name explorer

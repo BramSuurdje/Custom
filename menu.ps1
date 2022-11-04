@@ -18,8 +18,8 @@ function Show-Menu {
     Clear-Host
     Write-Host "================ $Title ================"
     
-    Write-Host "1: Press '1' for this option."
-    Write-Host "2: Press '2' for this option."
+    Write-Host "1: Om de Windows 10 Custom te installeren met LibreOffice"
+    Write-Host "2: Om de Windows 11 Custom te installeren met Libreoffice"
     Write-Host "3: Press '3' for this option."
     Write-Host "Q: Press 'Q' to quit."
 }
@@ -31,9 +31,9 @@ do
     switch ($selection)
     {
     '1' {
-    Start-Process "Z:\--Custom--\Custom Windows 11 Libreoffice.bat"
+    Start-Process "$PSScriptRoot\src\Custom Windows 10 Libreoffice.bat"
     } '2' {
-    'You chose option #2'
+    Start-Process "$PSScriptRoot\src\Custom Windows 11 Libreoffice.bat"
     } '3' {
       'You chose option #3'
     }

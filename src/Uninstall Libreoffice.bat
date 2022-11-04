@@ -4,11 +4,11 @@ TITLE Uninstall Libreoffice
 GOTO UNINSTALL
 
 :UNINSTALL
-	IF NOT EXIST "Z:\--Custom--\src\uninstall-libreoffice.ps1" (
+	IF NOT EXIST "$PSScriptRoot\uninstall-libreoffice.ps1" (
 		COLOR C
 		CLS
 		ECHO PowerShell-bestanden zijn niet gevonden, zorg ervoor dat deze aanwezig zijn en voer dit script opnieuw uit.
-		ECHO Excepted path : "Z:\--Custom--\src\uninstall-libreoffice.ps1"
+		ECHO Excepted path : "$PSScriptRoot\uninstall-libreoffice.ps1"
 		ECHO Press any key to close this script
 		PAUSE > NUL
 		EXIT
@@ -27,5 +27,5 @@ GOTO UNINSTALL
 	GOTO START_SCRIPT
 
     :START_SCRIPT
-	powershell -NoProfile -ExecutionPolicy Bypass -File "Z:\--Custom--\src\uninstall-libreoffice.ps1"
+	powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\uninstall-libreoffice.ps1"
     EXIT
