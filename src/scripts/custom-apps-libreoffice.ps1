@@ -1,10 +1,7 @@
-###### Install Chocolatery
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-######
+Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+Install-Script -Name winget-install -Force
+winget-install.ps1
 
-###### Install Custom Apps
-choco install adobereader googlechrome microsoft-edge vlc libreoffice -fresh netfx-4.8 -y
-choco install teamviewer --ignore-checksums -y
-######
+winget install --id=Adobe.Acrobat.Reader.64-bit -e  ; winget install --id=Google.Chrome -e  ; winget install --id=Microsoft.Edge -e  ; winget install --id=VideoLAN.VLC.Nightly -e  ; winget install --id=TheDocumentFoundation.LibreOffice -e  ; winget install --id=Microsoft.dotNetFramework -e  ; winget install --id=TeamViewer.TeamViewer -e 
 
 Write-Output "Custom with LibreOffice Sucessfull"
