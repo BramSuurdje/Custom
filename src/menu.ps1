@@ -17,13 +17,13 @@ function Show-Menu {
     )
     Clear-Host
     Write-Host "================ $Title ================"
-    
+    Write-Host ""
     Write-Host "1: Windows 10 Custom Installeren"
     Write-Host "2: Windows 11 Custom Installeren"
-    Write-Host "3: Press '3' for this option."
-    Write-Host "Q: Press 'Q' to quit."
-
+    Write-Host ""
     Write-Host "5: Libreoffice Verwijderen"
+    Write-Host ""
+    Write-Host "Q: Press 'Q' to quit."
 }
 
 do
@@ -39,9 +39,11 @@ do
     } '3' {
     # insert code here
     } '5' {
-    Start-Process "$PSScriptRoot\uninstall-libreoffice.bat"
+    Start-Process "$PSScriptRoot\Uninstall Libreoffice.bat"
     }
     }
     pause
  }
  until ($selection -eq 'q')
+
+ 

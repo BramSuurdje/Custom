@@ -1,1 +1,1 @@
-powershell -NoProfile -ExecutionPolicy Bypass -File "%cd%\src\scripts\menu.ps1"
+powershell -NoProfile -ExecutionPolicy Bypass -File "%cd%\src\menu.ps1"
