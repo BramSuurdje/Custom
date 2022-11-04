@@ -18,8 +18,8 @@ function Show-Menu {
     Clear-Host
     Write-Host "================ $Title ================"
     
-    Write-Host "1: Om de Windows 10 Custom te installeren met LibreOffice"
-    Write-Host "2: Om de Windows 11 Custom te installeren met Libreoffice"
+    Write-Host "1: Windows 10 Custom Installeren"
+    Write-Host "2: Windows 11 Custom Installeren"
     Write-Host "3: Press '3' for this option."
     Write-Host "Q: Press 'Q' to quit."
 }
