@@ -4,9 +4,12 @@ TITLE Custom Windows Libreoffice
 GOTO START_SCRIPT
 
 :START_SCRIPT
-	powershell -NoProfile -ExecutionPolicy Bypass -File "%cd%\src\scripts\custom-apps-libreoffice.ps1"
-	powershell -NoProfile -ExecutionPolicy Bypass -File "%cd%\src\scripts\enable-desktop-shortcuts.ps1"
-	powershell -NoProfile -ExecutionPolicy Bypass -File "%cd%\src\scripts\change-drive-letter.ps1"
-	powershell -NoProfile -ExecutionPolicy Bypass -File "%cd%\src\scripts\startmenuw11.ps1"
-	powershell -NoProfile -ExecutionPolicy Bypass -File "%cd%\src\scripts\update.ps1"
-	EXIT
+	powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\scripts\custom-apps-libreoffice.ps1"
+	powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\scripts\enable-desktop-shortcuts.ps1"
+	powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\scripts\change-drive-letter.ps1"
+	powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\scripts\startmenuw11.ps1"
+	powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\scripts\update.ps1"
+
+
+
+pause
