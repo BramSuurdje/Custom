@@ -61,19 +61,8 @@ GOTO CUSTOM-APPS
 		PAUSE > NUL
 		EXIT
 	)
-	GOTO CHECK_ADMIN_PERMS
-
-:CHECK_ADMIN_PERMS
-	openfiles >nul 2>&1
-	IF NOT %errorLevel% == 0 (
-		COLOR C
-		CLS
-		ECHO Please run this script as Administrator
-		PAUSE > NUL
-		EXIT
-	)
 	GOTO START_SCRIPT
-
+	
 :START_SCRIPT
 	powershell -NoProfile -ExecutionPolicy Bypass -File "Z:\--Custom--\src\custom-apps-libreoffice.ps1"
 	powershell -NoProfile -ExecutionPolicy Bypass -File "Z:\--Custom--\src\enable-desktop-shortcuts.ps1"
