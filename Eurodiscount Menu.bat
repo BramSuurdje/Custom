@@ -1,0 +1,1 @@
+powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\menu.ps1"

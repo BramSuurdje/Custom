@@ -31,9 +31,9 @@ do
     switch ($selection)
     {
     '1' {
-    Start-Process "$PSScriptRoot\src\Custom Windows 10 Libreoffice.bat"
+    Start-Process "$PSScriptRoot\Custom Windows 10 Libreoffice.bat"
     } '2' {
-    Start-Process "$PSScriptRoot\src\Custom Windows 11 Libreoffice.bat"
+    Start-Process "$PSScriptRoot\Custom Windows 11 Libreoffice.bat"
     } '3' {
       'You chose option #3'
     }
