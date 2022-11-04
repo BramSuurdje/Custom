@@ -1,5 +1,3 @@
-
-
 # Check if winget is installed
 Write-Host "Checking if Winget is Installed..."
 if (Test-Path ~\AppData\Local\Microsoft\WindowsApps\winget.exe) {
