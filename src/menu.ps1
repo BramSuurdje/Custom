@@ -22,6 +22,7 @@ function Show-Menu {
     Write-Host "2: Windows 11 Custom Installeren        |    4: Check voor updates"
     Write-Host ""
     Write-Host "5: Libreoffice Verwijderen"
+    Write-Host "6: Office 2021 Pro Plus Installeren"
     Write-Host ""
     Write-Host "Q: Press 'Q' to quit."
 }
@@ -42,10 +43,10 @@ do
     Start-Process "$PSScriptRoot\Check for Updates.bat"
     } '5' {
     Start-Process "$PSScriptRoot\Uninstall Libreoffice.bat"
-    }
+    } '6' {
+    Start-Process "$PSScriptRoot\Install Office2021.bat"
+    }       
     }
     pause
  }
  until ($selection -eq 'q')
-
- 
