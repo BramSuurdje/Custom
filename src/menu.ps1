@@ -1,5 +1,5 @@
 If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]'Administrator')) {
-    Write-Host "You didn't run this script as an Administrator. This script will self elevate to run as an Administrator and continue."
+    Write-Host "U hebt dit script niet als beheerder uitgevoerd. Dit script zal zichzelf verhogen om als beheerder te worden uitgevoerd en door te gaan."
     Start-Sleep 1
     Write-Host "                                               3"
     Start-Sleep 1
@@ -16,10 +16,10 @@ function Show-Menu {
         [string]$Title = 'Eurodiscount Menu'
     )
     Clear-Host
-    Write-Host "================ $Title ================"
+    Write-Host "====================================== $Title ======================================"
     Write-Host ""
-    Write-Host "1: Windows 10 Custom Installeren"
-    Write-Host "2: Windows 11 Custom Installeren"
+    Write-Host "1: Windows 10 Custom Installeren        |    3: Updates Uitvoeren"
+    Write-Host "2: Windows 11 Custom Installeren        |    4: Check voor updates"
     Write-Host ""
     Write-Host "5: Libreoffice Verwijderen"
     Write-Host ""
@@ -37,7 +37,9 @@ do
     } '2' {
     Start-Process "$PSScriptRoot\Custom Windows 11 Libreoffice.bat"
     } '3' {
-    # insert code here
+    Start-Process "$PSScriptRoot\Updates Uitvoeren.bat"
+    } '4' {
+    Start-Process "$PSScriptRoot\Check for Updates.bat"
     } '5' {
     Start-Process "$PSScriptRoot\Uninstall Libreoffice.bat"
     }
