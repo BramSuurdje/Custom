@@ -34,7 +34,7 @@ do
         
         choco install adwcleaner -y  
     } '2' {
-    choco install adwcleaner -y 
+    choco uninstall adwcleaner -y 
     }
     }
     pause

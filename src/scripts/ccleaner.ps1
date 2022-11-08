@@ -34,7 +34,7 @@ do
         
         choco install ccleaner -y  
     } '2' {
-    choco install ccleaner -y 
+    choco uninstall ccleaner -y 
     }
     }
     pause

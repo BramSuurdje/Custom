@@ -34,7 +34,7 @@ do
         
         choco install hdsentinel -y 
     } '2' {
-    choco install hdsentinel -y
+    choco uninstall hdsentinel -y
     }
     }
     pause
