@@ -1,12 +1,4 @@
 If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]'Administrator')) {
-    Write-Host "U hebt dit script niet als beheerder uitgevoerd. Dit script zal zichzelf verhogen om als beheerder te worden uitgevoerd en door te gaan."
-    Start-Sleep 1
-    Write-Host "                                               3"
-    Start-Sleep 1
-    Write-Host "                                               2"
-    Start-Sleep 1
-    Write-Host "                                               1"
-    Start-Sleep 1
     Start-Process powershell.exe -ArgumentList ("-NoProfile -ExecutionPolicy Bypass -File `"{0}`"" -f $PSCommandPath) -Verb RunAs
     Exit
 }
