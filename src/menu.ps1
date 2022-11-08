@@ -13,16 +13,24 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 
 function Show-Menu {
     param (
-        [string]$Title = 'Eurodiscount Menu'
+        [string]$Title = 'Eurodiscount Menu')
+    param (    
+        [string]$Title2 = 'Opschoning'
     )
     Clear-Host
     Write-Host "====================================== $Title ======================================"
     Write-Host ""
-    Write-Host "1: Windows 10 Custom Installeren        |    3: Updates Uitvoeren"
-    Write-Host "2: Windows 11 Custom Installeren        |    4: Check voor updates"
+    Write-Host "1: Windows 10 Custom Installeren               |3: Updates Uitvoeren"
+    Write-Host "2: Windows 11 Custom Installeren               |4: Check voor updates"
     Write-Host ""
     Write-Host "5: Libreoffice Verwijderen"
     Write-Host "6: Office 2021 Pro Plus Installeren"
+    Write-Host ""
+    Write-Host "----------------------------------------- $Title2 ---------------------------------------"
+    Write-Host "9: HDSentinal"
+    Write-Host "10: adwcleaner"
+    Write-Host "11: CCleaner"
+    Write-Host "12: Malware bites"
     Write-Host ""
     Write-Host "Q: Press 'Q' to quit."
 }
@@ -41,6 +49,14 @@ do
     Start-Process "$PSScriptRoot\Updates Uitvoeren.bat"
     } '4' {
     Start-Process "$PSScriptRoot\Check for Updates.bat"
+    } '9' { # HDsentinal
+    Start-Process "$PSScriptRoot\hdsentinelinstallerorremove.bat"
+    } '10' { # adwcleaner
+    Start-Process "$PSScriptRoot\adwcleanerinstallerorremove.bat"
+    } '11' { # CCleaner
+    Start-Process "$PSScriptRoot\ccleanerinstallerorremove.bat"
+    } '12' { # Malwarebytes
+    Start-Process "$PSScriptRoot\malwarebytesinstallerorremove.bat"
     } '5' {
     Start-Process "$PSScriptRoot\Uninstall Libreoffice.bat"
     } '6' {
