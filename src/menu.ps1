@@ -27,10 +27,11 @@ function Show-Menu {
     Write-Host "6: Office 2021 Pro Plus Installeren"
     Write-Host ""
     Write-Host "----------------------------------------- $Title2 ---------------------------------------"
-    Write-Host "9: HDSentinal"
-    Write-Host "10: adwcleaner"
-    Write-Host "11: CCleaner"
-    Write-Host "12: Malware bites"
+    Write-Host "9: HDSentinal Installeren"
+    Write-Host "10: adwcleaner Installeren"
+    Write-Host "11: CCleaner Installeren"
+    Write-Host "12: Malware bites Installeren"
+    Write-Host "13: Alle Opschonings programmas verwijderen"
     Write-Host ""
     Write-Host "Q: Press 'Q' to quit."
 }
@@ -55,6 +56,8 @@ do
     Start-Process "$PSScriptRoot\adwcleanerinstallerorremove.bat"
     } '11' { # CCleaner
     Start-Process "$PSScriptRoot\ccleanerinstallerorremove.bat"
+    } '13' {
+    Start-Process "$PSScriptRoot\uninstall-opschoning.bat"
     } '12' { # Malwarebytes
     Start-Process "$PSScriptRoot\malwarebytesinstallerorremove.bat"
     } '5' {
