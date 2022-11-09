@@ -16,9 +16,10 @@ sleep 3
 </Configuration>' | Out-File $PSScriptRoot\files\configuration-office-professional-plus-2021-64-bit.xml
 
 sleep 3
-
+ Write-Host "Installatie voor Office 2021 nu gestart!"
 .\setup.exe /download configuration-office-professional-plus-2021-64-bit.xml
 .\setup.exe /configure configuration-office-professional-plus-2021-64-bit.xml
+Write-Host "Installatie voltooid!"
 
 Remove-Item -LiteralPath "C:\OfficeSetup" -Force -Recurse
 Remove-Item configuration-office-professional-plus-2021-64-bit.xml

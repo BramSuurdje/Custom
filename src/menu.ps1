@@ -23,39 +23,48 @@ function Show-Menu {
     Write-Host "10: adwcleaner Installeren"
     Write-Host "11: CCleaner Installeren"
     Write-Host "12: Malware bites Installeren"
+    Write-Host ""
     Write-Host "13: Alle Opschonings programmas verwijderen"
     Write-Host ""
-    Write-Host "Q: Press 'Q' to quit."
+    Write-Host "Q: Om Af te sluiten"
 }
 
 do
  {
     Show-Menu
-    $selection = Read-Host "Please make a selection"
+    $selection = Read-Host "Maak een Keuze"
     switch ($selection)
     {
-    '1' {
-    Start-Process "$PSScriptRoot\Custom Windows 10 Libreoffice.bat"
-    } '2' {
-    Start-Process "$PSScriptRoot\Custom Windows 11 Libreoffice.bat"
-    } '3' {
-    Start-Process "$PSScriptRoot\Updates Uitvoeren.bat"
-    } '4' {
-    Start-Process "$PSScriptRoot\Check for Updates.bat"
+    '1' { # Custom windows 10
+    & "$PSScriptRoot\custom-apps-libreoffice.ps1"
+    & "$PSScriptRoot\enable-desktop-shortcuts.ps1"
+    & "$PSScriptRoot\change-drive-letter.ps1"
+    & "$PSScriptRoot\startmenuw10.ps1"
+    & "$PSScriptRoot\update.ps1"
+    } '2' { # Custom Windows 11
+    & "$PSScriptRoot\custom-apps-libreoffice.ps1"
+    & "$PSScriptRoot\enable-desktop-shortcuts.ps1"
+    & "$PSScriptRoot\change-drive-letter.ps1"
+    & "$PSScriptRoot\startmenuw11.ps1"
+    & "$PSScriptRoot\update.ps1"
+    } '3' { # updates uitvoeren
+    & "$PSScriptRoot\update.ps1"
+    } '4' { # zoeken naar updates
+    & "$PSScriptRoot\check-updates.ps1"
     } '9' { # HDsentinal
-    Start-Process "$PSScriptRoot\hdsentinelinstallerorremove.bat"
+    & "$PSScriptRoot\hdsentinal.ps1"
     } '10' { # adwcleaner
-    Start-Process "$PSScriptRoot\adwcleanerinstallerorremove.bat"
+    & "$PSScriptRoot\adwcleaner.ps1"
     } '11' { # CCleaner
-    Start-Process "$PSScriptRoot\ccleanerinstallerorremove.bat"
-    } '13' {
-    Start-Process "$PSScriptRoot\uninstall-opschoning.bat"
+    & "$PSScriptRoot/ccleaner.ps1"
+    } '13' { # alle opschonings programmas verwijderen
+    & "$PSScriptRoot\uninstallopschoning.ps1"
     } '12' { # Malwarebytes
-    Start-Process "$PSScriptRoot\malwarebytesinstallerorremove.bat"
-    } '5' {
-    Start-Process "$PSScriptRoot\Uninstall Libreoffice.bat"
-    } '6' {
-    Start-Process "$PSScriptRoot\Install Office2021.bat"
+    & "$PSScriptRoot\malwarebytes.ps1"
+    } '5' { # libreoffice verwijderen
+    & "$PSScriptRoot\scritps\uninstall-libreoffice.ps1"
+    } '6' { # Office 2021 installeren
+    & "$PSScriptRoot\office2021install.ps1"
     }       
     }
     pause
