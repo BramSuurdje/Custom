@@ -3,7 +3,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ######
 
 ###### Install Custom Apps
-choco install adobereader googlechrome microsoft-edge vlc libreoffice -fresh netfx-4.8 teamviewer -y
+choco install adobereader googlechrome microsoft-edge vlc libreoffice -fresh netfx-4.8  -y
+choco install teamviewer --ignore-checksums
+
 ######
 
 Write-Output "Custom with LibreOffice Sucessfull"
