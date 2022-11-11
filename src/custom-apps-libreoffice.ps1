@@ -4,7 +4,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 ###### Install Custom Apps
 choco install adobereader googlechrome microsoft-edge vlc libreoffice -fresh netfx-4.8  -y
-choco install teamviewer --ignore-checksums
+choco install teamviewer --ignore-checksums -y
 
 ###### set default apps to newly installed
 dism /online /Import-DefaultAppAssociations:"$PSScriptRoot\files\MyDefaultAppAssociations.xml"
