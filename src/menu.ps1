@@ -12,19 +12,18 @@ function Show-Menu {
     Clear-Host
     Write-Host "====================================== $Title ======================================"
     Write-Host ""
-    Write-Host "1: Windows 10 Custom Installeren               |3: Updates Uitvoeren"
-    Write-Host "2: Windows 11 Custom Installeren               |4: Check voor updates"
+    Write-Host "1: Windows 10 Custom Installeren"
+    Write-Host "2: Windows 11 Custom Installeren"
     Write-Host ""
-    Write-Host "5: Libreoffice Verwijderen"
-    Write-Host "6: Office 2021 Pro Plus Installeren"
+    Write-Host "3: Libreoffice Verwijderen"
     Write-Host ""
     Write-Host "----------------------------------------- $Title2 ---------------------------------------"
-    Write-Host "9: HDSentinal Installeren"
-    Write-Host "10: adwcleaner Installeren"
-    Write-Host "11: CCleaner Installeren"
-    Write-Host "12: Malware bites Installeren"
+    Write-Host "4: HDSentinal Installeren"
+    Write-Host "5: adwcleaner Installeren"
+    Write-Host "6: CCleaner Installeren"
+    Write-Host "7: Malware bites Installeren"
     Write-Host ""
-    Write-Host "13: Alle Opschonings programmas verwijderen"
+    Write-Host "8: Alle Opschonings programmas verwijderen"
     Write-Host ""
     Write-Host "Q: Om Af te sluiten"
 }
@@ -47,24 +46,18 @@ do
     & "$PSScriptRoot\change-drive-letter.ps1"
     & "$PSScriptRoot\startmenuw11.ps1"
     & "$PSScriptRoot\update.ps1"
-    } '3' { # updates uitvoeren
-    & "$PSScriptRoot\update.ps1"
-    } '4' { # zoeken naar updates
-    & "$PSScriptRoot\check-updates.ps1"
-    } '9' { # HDsentinal
+    } '4' { # HDsentinal
     & "$PSScriptRoot\hdsentinal.ps1"
-    } '10' { # adwcleaner
+    } '5' { # adwcleaner
     & "$PSScriptRoot\adwcleaner.ps1"
-    } '11' { # CCleaner
-    & "$PSScriptRoot/ccleaner.ps1"
-    } '13' { # alle opschonings programmas verwijderen
+    } '6' { # CCleaner
+    & "$PSScriptRoot\ccleaner.ps1"
+    } '8' { # alle opschonings programmas verwijderen
     & "$PSScriptRoot\uninstallopschoning.ps1"
-    } '12' { # Malwarebytes
+    } '7' { # Malwarebytes
     & "$PSScriptRoot\malwarebytes.ps1"
-    } '5' { # libreoffice verwijderen
-    & "$PSScriptRoot\scritps\uninstall-libreoffice.ps1"
-    } '6' { # Office 2021 installeren
-    & "$PSScriptRoot\office2021install.ps1"
+    } '3' { # libreoffice verwijderen
+    & "$PSScriptRoot\uninstall-libreoffice.ps1"
     }       
     }
     pause
