@@ -1,0 +1,47 @@
+﻿[2023-01-16 09:39:36.444] [info   ] [ini_access ] [11332:17976] [62A635: 130] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\settings.ini started
+[2023-01-16 09:39:36.446] [info   ] [ini_access ] [11332:17976] [62A635: 130] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Setup\config.def started
+[2023-01-16 09:39:36.460] [info   ] [ini_access ] [11332:17976] [62A635: 130] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\usercfg.ini started
+[2023-01-16 09:39:36.463] [warning] [Burger     ] [11332:17976] [5DF293: 164] [22.3.579.0] [BurgerReporter.cpp] [164] asw::standalone_svc::BurgerReporter::RegisterRPC: Could not get RPC.
+[2023-01-16 09:39:36.463] [error  ] [Burger     ] [11332:17976] [5DF293: 244] [22.3.579.0] [BurgerReporter.cpp] [244] asw::standalone_svc::BurgerReporter::BurgerSwitch: Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2023-01-16 09:39:36.463] [warning] [Burger     ] [11332:17976] [5DF293: 247] [22.3.579.0] [BurgerReporter.cpp] [247] asw::standalone_svc::BurgerReporter::BurgerSwitch: Analytics (Burger.v4) disabled (hostname: )
+[2023-01-16 09:39:36.463] [error  ] [Burger     ] [11332:17976] [5DF293: 244] [22.3.579.0] [BurgerReporter.cpp] [244] asw::standalone_svc::BurgerReporter::BurgerSwitch: Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2023-01-16 09:39:36.463] [warning] [Burger     ] [11332:17976] [5DF293: 247] [22.3.579.0] [BurgerReporter.cpp] [247] asw::standalone_svc::BurgerReporter::BurgerSwitch: Analytics (Burger.v4) disabled (hostname: )
+[2023-01-16 09:39:36.463] [warning] [Burger     ] [11332:17976] [5DF293: 271] [22.3.579.0] [BurgerReporter.cpp] [271] asw::standalone_svc::BurgerReporter::GASwitch: Property GDPR_THIRD_PARTY_ANALYTICS_ENABLED not found, set default value
+[2023-01-16 09:39:36.470] [warning] [Burger     ] [11332:17976] [5DF293: 164] [22.3.579.0] [BurgerReporter.cpp] [164] asw::standalone_svc::BurgerReporter::RegisterRPC: Could not get RPC.
+[2023-01-16 09:39:36.471] [info   ] [DULib      ] [11332:17976] [BC734C: 219] [22.3.579.0] [DeviceManager.cpp] [219] DriverUpdater::DeviceManager::Init: Initialize Update Engine
+[2023-01-16 09:39:36.476] [warning] [ini_access ] [11332:17608] [62A635: 145] D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Setup overlapped IO failed, error: 995.
+[2023-01-16 09:40:01.639] [info   ] [ini_access ] [11332:18184] [62A635: 130] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\burger_client.ini started
+[2023-01-16 09:40:01.721] [info   ] [ini_access ] [11332:19340] [62A635:  75] watch task termination for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\settings.ini requested
+[2023-01-16 09:40:01.721] [info   ] [ini_access ] [11332:19340] [62A635:  91] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\settings.ini gracefully terminated
+[2023-01-16 09:40:01.721] [info   ] [ini_access ] [11332:19340] [62A635:  75] watch task termination for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Setup\config.def requested
+[2023-01-16 09:40:01.721] [info   ] [ini_access ] [11332:19340] [62A635:  91] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Setup\config.def gracefully terminated
+[2023-01-16 09:40:01.721] [info   ] [ini_access ] [11332:19340] [62A635:  75] watch task termination for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\usercfg.ini requested
+[2023-01-16 09:40:01.721] [info   ] [ini_access ] [11332:19340] [62A635:  91] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\usercfg.ini gracefully terminated
+[2023-01-16 09:40:01.721] [info   ] [ini_access ] [11332:19340] [62A635:  75] watch task termination for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\burger_client.ini requested
+[2023-01-16 09:40:01.721] [info   ] [ini_access ] [11332:19340] [62A635:  91] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\burger_client.ini gracefully terminated
+[2023-01-16 09:40:01.832] [info   ] [log_module ] [11332:19340] [FF6C2C:  31] LogModule is going to be destroyed.
+[2023-01-16 09:40:01.832] [info   ] [log_module ] [11332:19340] [FF6C2C:  32] =====================================================================================================================
+[2023-01-16 09:42:02.258] [info   ] [ini_access ] [ 1268: 4964] [62A635: 130] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\settings.ini started
+[2023-01-16 09:42:02.259] [info   ] [ini_access ] [ 1268: 4964] [62A635: 130] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Setup\config.def started
+[2023-01-16 09:42:02.259] [info   ] [ini_access ] [ 1268: 4964] [62A635: 130] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\usercfg.ini started
+[2023-01-16 09:42:02.262] [warning] [Burger     ] [ 1268: 4964] [5DF293: 164] [22.3.579.0] [BurgerReporter.cpp] [164] asw::standalone_svc::BurgerReporter::RegisterRPC: Could not get RPC.
+[2023-01-16 09:42:02.262] [error  ] [Burger     ] [ 1268: 4964] [5DF293: 244] [22.3.579.0] [BurgerReporter.cpp] [244] asw::standalone_svc::BurgerReporter::BurgerSwitch: Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2023-01-16 09:42:02.262] [warning] [Burger     ] [ 1268: 4964] [5DF293: 247] [22.3.579.0] [BurgerReporter.cpp] [247] asw::standalone_svc::BurgerReporter::BurgerSwitch: Analytics (Burger.v4) disabled (hostname: )
+[2023-01-16 09:42:02.262] [error  ] [Burger     ] [ 1268: 4964] [5DF293: 244] [22.3.579.0] [BurgerReporter.cpp] [244] asw::standalone_svc::BurgerReporter::BurgerSwitch: Could not read property BURGER_SETTINGS_PANCAKE_HOSTNAME (0x00000003)
+[2023-01-16 09:42:02.262] [warning] [Burger     ] [ 1268: 4964] [5DF293: 247] [22.3.579.0] [BurgerReporter.cpp] [247] asw::standalone_svc::BurgerReporter::BurgerSwitch: Analytics (Burger.v4) disabled (hostname: )
+[2023-01-16 09:42:02.262] [warning] [Burger     ] [ 1268: 4964] [5DF293: 164] [22.3.579.0] [BurgerReporter.cpp] [164] asw::standalone_svc::BurgerReporter::RegisterRPC: Could not get RPC.
+[2023-01-16 09:42:02.262] [info   ] [DULib      ] [ 1268: 4964] [BC734C: 219] [22.3.579.0] [DeviceManager.cpp] [219] DriverUpdater::DeviceManager::Init: Initialize Update Engine
+[2023-01-16 09:42:02.269] [warning] [ini_access ] [ 1268: 6724] [62A635: 145] D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Setup overlapped IO failed, error: 995.
+[2023-01-16 09:42:02.269] [warning] [ini_access ] [ 1268:10620] [62A635: 145] D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data overlapped IO failed, error: 995.
+[2023-01-16 09:42:02.269] [warning] [ini_access ] [ 1268: 6724] [62A635: 145] D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data overlapped IO failed, error: 995.
+[2023-01-16 09:42:04.572] [info   ] [ini_access ] [ 1268: 3380] [62A635: 130] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\burger_client.ini started
+[2023-01-16 09:42:04.575] [info   ] [ini_access ] [ 1268:16024] [62A635:  75] watch task termination for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\settings.ini requested
+[2023-01-16 09:42:04.575] [info   ] [ini_access ] [ 1268:16024] [62A635:  91] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\settings.ini gracefully terminated
+[2023-01-16 09:42:04.575] [info   ] [ini_access ] [ 1268:16024] [62A635:  75] watch task termination for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Setup\config.def requested
+[2023-01-16 09:42:04.575] [info   ] [ini_access ] [ 1268:16024] [62A635:  91] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Setup\config.def gracefully terminated
+[2023-01-16 09:42:04.575] [info   ] [ini_access ] [ 1268:16024] [62A635:  75] watch task termination for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\usercfg.ini requested
+[2023-01-16 09:42:04.575] [info   ] [ini_access ] [ 1268:16024] [62A635:  91] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\usercfg.ini gracefully terminated
+[2023-01-16 09:42:04.575] [info   ] [ini_access ] [ 1268:16024] [62A635:  75] watch task termination for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\burger_client.ini requested
+[2023-01-16 09:42:04.575] [info   ] [ini_access ] [ 1268:16024] [62A635:  91] watch task for D:\Optimizations\Custom-Installations\--Custom--\src\files\ccsetup607\Data\burger_client.ini gracefully terminated
+[2023-01-16 09:42:04.682] [info   ] [log_module ] [ 1268:16024] [FF6C2C:  31] LogModule is going to be destroyed.
+[2023-01-16 09:42:04.682] [info   ] [log_module ] [ 1268:16024] [FF6C2C:  32] =====================================================================================================================

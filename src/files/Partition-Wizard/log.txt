@@ -1,0 +1,97 @@
+=====================================================================================
+2022-11-24 05:21:55:731 => [                                                    main.cpp, 00147] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2022-11-24 05:21:55:731 => [                                                    main.cpp, 00148] => System is server:No
+2022-11-24 05:21:55:731 => [                                                    main.cpp, 00149] => Software is 64 bit:Yes
+2022-11-24 05:21:55:731 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2022-11-24 05:21:55:929 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2022-11-24 05:21:56:214 => [                                    kdpifontstylesetting.cpp, 00114] => SCREEN-WIDTH:1920 SCREEN-HEIGHT:1080
+2022-11-24 05:21:56:214 => [                                    kdpifontstylesetting.cpp, 00117] => SCREEN-WIDTH:1920 SCREEN-HEIGHT:1009
+2022-11-24 05:21:57:012 => [                                                    main.cpp, 00904] => rcScreen.width=1920, rcScreen.height=1080
+2022-11-24 05:21:57:236 => [                                          kvolumemanager.cpp, 00231] => Disk0, WDC WD10EZEX-08WN4A0 SATA, CHS:121601,255,63, total sectors: 1953525168, bytes per sector = 512
+2022-11-24 05:21:58:049 => [                                          kvolumemanager.cpp, 00252] => Disk0 => set alignment factor = AlignToMB
+2022-11-24 05:21:58:539 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+=====================================================================================
+2023-01-15 21:46:00:241 => [                                                    main.cpp, 00147] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2023-01-15 21:46:00:241 => [                                                    main.cpp, 00148] => System is server:No
+2023-01-15 21:46:00:241 => [                                                    main.cpp, 00149] => Software is 64 bit:Yes
+2023-01-15 21:46:00:241 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2023-01-15 21:46:00:298 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2023-01-15 21:46:00:299 => [                                                 idriver.cpp, 00378] => OpenService failed!  Error = 1060 
+
+2023-01-15 21:46:00:299 => [                                                 idriver.cpp, 00700] => Failed to call ManageDriver(DRIVER_FUNC_START)
+2023-01-15 21:46:00:299 => [                                                 idriver.cpp, 00455] => OpenService failed!  Error = 1060 
+
+2023-01-15 21:46:00:299 => [                                                 idriver.cpp, 00311] => OpenService failed!  Error = 1060 
+
+2023-01-15 21:46:00:361 => [                                    kdpifontstylesetting.cpp, 00114] => SCREEN-WIDTH:1920 SCREEN-HEIGHT:1080
+2023-01-15 21:46:00:361 => [                                    kdpifontstylesetting.cpp, 00117] => SCREEN-WIDTH:1920 SCREEN-HEIGHT:1009
+2023-01-15 21:46:00:814 => [                                                    main.cpp, 00904] => rcScreen.width=1920, rcScreen.height=1080
+2023-01-15 21:46:00:834 => [                                          kvolumemanager.cpp, 00231] => Disk0, Samsung SSD 980 500GB, CHS:60801,255,63, total sectors: 976773168, bytes per sector = 512
+2023-01-15 21:46:00:888 => [                                          kvolumemanager.cpp, 00252] => Disk0 => set alignment factor = AlignToMB
+2023-01-15 21:46:00:889 => [                                          kvolumemanager.cpp, 00231] => Disk1, ADATA SP 550 USB, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2023-01-15 21:46:00:943 => [                                          kvolumemanager.cpp, 00252] => Disk1 => set alignment factor = AlignToMB
+2023-01-15 21:46:00:949 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2023-01-15 21:46:00:949 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+=====================================================================================
+2023-01-16 08:52:08:355 => [                                                    main.cpp, 00147] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2023-01-16 08:52:08:356 => [                                                    main.cpp, 00148] => System is server:No
+2023-01-16 08:52:08:356 => [                                                    main.cpp, 00149] => Software is 64 bit:Yes
+2023-01-16 08:52:08:356 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2023-01-16 08:52:08:387 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2023-01-16 08:52:08:389 => [                                                 idriver.cpp, 00378] => OpenService failed!  Error = 1060 
+
+2023-01-16 08:52:08:389 => [                                                 idriver.cpp, 00700] => Failed to call ManageDriver(DRIVER_FUNC_START)
+2023-01-16 08:52:08:389 => [                                                 idriver.cpp, 00455] => OpenService failed!  Error = 1060 
+
+2023-01-16 08:52:08:389 => [                                                 idriver.cpp, 00311] => OpenService failed!  Error = 1060 
+
+2023-01-16 08:52:08:552 => [                                    kdpifontstylesetting.cpp, 00114] => SCREEN-WIDTH:1920 SCREEN-HEIGHT:1080
+2023-01-16 08:52:08:552 => [                                    kdpifontstylesetting.cpp, 00117] => SCREEN-WIDTH:1920 SCREEN-HEIGHT:1009
+2023-01-16 08:52:09:176 => [                                                    main.cpp, 00904] => rcScreen.width=1920, rcScreen.height=1080
+2023-01-16 08:52:09:217 => [                                          kvolumemanager.cpp, 00231] => Disk0, WDC PC SN530 SDBPNPZ-1T00-1002, CHS:124519,255,63, total sectors: 2000409264, bytes per sector = 512
+2023-01-16 08:52:09:307 => [                                          kvolumemanager.cpp, 00252] => Disk0 => set alignment factor = AlignToMB
+2023-01-16 08:52:09:311 => [                                          kvolumemanager.cpp, 00231] => Disk1, SKHynix_HFM256GD3HX015N, CHS:31130,255,63, total sectors: 500118192, bytes per sector = 512
+2023-01-16 08:52:09:314 => [                                          kvolumemanager.cpp, 00252] => Disk1 => set alignment factor = AlignToMB
+2023-01-16 08:52:09:315 => [                                          kvolumemanager.cpp, 00231] => Disk2, ADATA SP 550 USB, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2023-01-16 08:52:09:373 => [                                          kvolumemanager.cpp, 00252] => Disk2 => set alignment factor = AlignToMB
+2023-01-16 08:52:09:381 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2023-01-16 08:52:09:381 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2023-01-16 08:52:09:381 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+=====================================================================================
+2023-01-16 09:44:27:801 => [                                                    main.cpp, 00147] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2023-01-16 09:44:27:801 => [                                                    main.cpp, 00148] => System is server:No
+2023-01-16 09:44:27:801 => [                                                    main.cpp, 00149] => Software is 64 bit:Yes
+2023-01-16 09:44:27:801 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2023-01-16 09:44:27:827 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2023-01-16 09:44:27:828 => [                                                 idriver.cpp, 00636] => Failed to copy file :.
+2023-01-16 09:44:27:878 => [                                    kdpifontstylesetting.cpp, 00114] => SCREEN-WIDTH:1920 SCREEN-HEIGHT:1080
+2023-01-16 09:44:27:878 => [                                    kdpifontstylesetting.cpp, 00117] => SCREEN-WIDTH:1920 SCREEN-HEIGHT:1009
+2023-01-16 09:44:28:357 => [                                                    main.cpp, 00904] => rcScreen.width=1920, rcScreen.height=1080
+2023-01-16 09:44:28:394 => [                                          kvolumemanager.cpp, 00231] => Disk0, WDC PC SN530 SDBPNPZ-1T00-1002, CHS:124519,255,63, total sectors: 2000409264, bytes per sector = 512
+2023-01-16 09:44:28:477 => [                                          kvolumemanager.cpp, 00252] => Disk0 => set alignment factor = AlignToMB
+2023-01-16 09:44:28:482 => [                                          kvolumemanager.cpp, 00231] => Disk1, SKHynix_HFM256GD3HX015N, CHS:31130,255,63, total sectors: 500118192, bytes per sector = 512
+2023-01-16 09:44:28:485 => [                                          kvolumemanager.cpp, 00252] => Disk1 => set alignment factor = AlignToMB
+2023-01-16 09:44:28:487 => [                                          kvolumemanager.cpp, 00231] => Disk2, ADATA SP 550 USB, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2023-01-16 09:44:28:541 => [                                          kvolumemanager.cpp, 00252] => Disk2 => set alignment factor = AlignToMB
+2023-01-16 09:44:28:547 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2023-01-16 09:44:28:547 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2023-01-16 09:44:28:547 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.
+=====================================================================================
+2023-01-16 09:49:05:157 => [                                                    main.cpp, 00147] => OS MajorVer:10 MiniorVer:0 ServicePack:0
+2023-01-16 09:49:05:157 => [                                                    main.cpp, 00148] => System is server:No
+2023-01-16 09:49:05:157 => [                                                    main.cpp, 00149] => Software is 64 bit:Yes
+2023-01-16 09:49:05:157 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2023-01-16 09:49:05:187 => [                                                 idriver.cpp, 00613] => Copying 64 bit driver.
+2023-01-16 09:49:05:188 => [                                                 idriver.cpp, 00636] => Failed to copy file :.
+2023-01-16 09:49:05:278 => [                                    kdpifontstylesetting.cpp, 00114] => SCREEN-WIDTH:1920 SCREEN-HEIGHT:1080
+2023-01-16 09:49:05:278 => [                                    kdpifontstylesetting.cpp, 00117] => SCREEN-WIDTH:1920 SCREEN-HEIGHT:1009
+2023-01-16 09:49:05:782 => [                                                    main.cpp, 00904] => rcScreen.width=1920, rcScreen.height=1080
+2023-01-16 09:49:05:814 => [                                          kvolumemanager.cpp, 00231] => Disk0, WDC PC SN530 SDBPNPZ-1T00-1002, CHS:124519,255,63, total sectors: 2000409264, bytes per sector = 512
+2023-01-16 09:49:05:896 => [                                          kvolumemanager.cpp, 00252] => Disk0 => set alignment factor = AlignToMB
+2023-01-16 09:49:05:900 => [                                          kvolumemanager.cpp, 00231] => Disk1, SKHynix_HFM256GD3HX015N, CHS:31130,255,63, total sectors: 500118192, bytes per sector = 512
+2023-01-16 09:49:05:903 => [                                          kvolumemanager.cpp, 00252] => Disk1 => set alignment factor = AlignToMB
+2023-01-16 09:49:05:905 => [                                          kvolumemanager.cpp, 00231] => Disk2, ADATA SP 550 USB, CHS:14593,255,63, total sectors: 234441648, bytes per sector = 512
+2023-01-16 09:49:05:959 => [                                          kvolumemanager.cpp, 00252] => Disk2 => set alignment factor = AlignToMB
+2023-01-16 09:49:05:964 => [                                             dynamicdisk.cpp, 00215] => Disk0 is not a dynamic disk.
+2023-01-16 09:49:05:964 => [                                             dynamicdisk.cpp, 00215] => Disk1 is not a dynamic disk.
+2023-01-16 09:49:05:964 => [                                             dynamicdisk.cpp, 00215] => Disk2 is not a dynamic disk.

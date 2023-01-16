@@ -1,0 +1,30 @@
+{
+	"Backups" : [],
+	"DeviceList" : [],
+	"IgnoreList" : [],
+	"OpenTasks" : [],
+	"Status" : 
+	{
+		"foundDevices" : 0,
+		"lastScan" : 0,
+		"outdatedDrivers" : 0,
+		"rebootRequired" : false,
+		"version" : "22.3.579.0",
+		"vulnerableDrivers" : 0
+	},
+	"computerInfo" : 
+	{
+		"baseboard_manufacturer" : "ASUSTeK COMPUTER INC.",
+		"baseboard_product" : "FA506IV",
+		"baseboard_version" : "1.0",
+		"bios_manufacturer" : "American Megatrends Inc.",
+		"bios_name" : "FA506IV.320",
+		"bios_smbios_version" : "FA506IV.320",
+		"bios_version" : "_ASUS_ - 1072009",
+		"model" : "ASUS TUF Gaming A15 FA506IV_FX506IV",
+		"system_family" : "ASUS TUF Gaming A15",
+		"system_sku" : " ",
+		"type" : "laptop",
+		"vendor" : "ASUSTeK COMPUTER INC."
+	}
+}
