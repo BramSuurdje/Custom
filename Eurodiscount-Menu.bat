@@ -191,28 +191,33 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\src\prog\microsoftedg
 GOTO MENU
 :MicrosoftEdgeV
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\src\prog\verwijderen\microsoftedge.ps1"
+pause
 GOTO MENU
 :VLCI
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\src\prog\vlc.ps1"
 GOTO MENU
 :VLCV
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\src\prog\verwijderen\vlc.ps1"
+pause
 GOTO MENU
 :LibreofficeI
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\src\prog\libreoffice.ps1"
 GOTO MENU
 :LibreofficeV
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\src\prog\verwijderen\libreoffice.ps1"
+pause
 GOTO MENU
 :NetframeworkI
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\src\prog\netframework.ps1"
 GOTO MENU
 :NetframeworkV
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\src\prog\verwijderen\netframework.ps1"
+pause
 GOTO MENU
 :TeamViewerI
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\src\prog\Teamviewer.ps1"
 GOTO MENU
 :TeamViewerV
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0\src\prog\verwijderen\Teamviewer.ps1"
+pause
 GOTO MENU
