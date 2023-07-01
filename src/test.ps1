@@ -1,3 +1,13 @@
+# Check if running with administrative privileges
+$isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+
+# If not running as administrator, relaunch the script with elevated privileges
+if (-not $isAdmin) {
+    Write-Output "Requesting administrative permissions..."
+    Start-Process -FilePath PowerShell.exe -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+    exit
+}
+
 $scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 Function Show-Menu {
