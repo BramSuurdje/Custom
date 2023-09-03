@@ -18,7 +18,7 @@ Function Show-Menu {
     Write-Host ""
     Write-Host "1 - Windows Custom"
     Write-Host ""
-    Write-Host "2 - Specifieke Apps Installeren"
+    Write-Host "2 - Apps Updaten"
     Write-Host ""
     Write-Host "3 - HDSentinel"
     Write-Host "4 - CCleaner"
@@ -27,11 +27,11 @@ Function Show-Menu {
     Write-Host "0 - EXIT"
     Write-Host ""
 
-    $choice = Read-Host "Type 1, 2, 3, or 4 then press ENTER"
+    $choice = Read-Host "Type 1, 2, 3, or 4... then press ENTER"
 
     switch ($choice) {
         '1' { WinCustom }
-        '2' { SAPPS }
+        '2' { update-apps }
         '3' { Start-HDSentinel }
         '4' { Start-CCleaner }
         '5' { Start-HardwareInfo }
@@ -42,9 +42,40 @@ Function Show-Menu {
 }
 
 Function WinCustom {
-    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-    choco install adobereader googlechrome microsoft-edge vlc libreoffice -fresh netfx-4.8  -y
-    choco install teamviewer --ignore-checksums -y
+
+    # Check if winget is installed
+    $wingetInstalled = Get-Command winget -ErrorAction SilentlyContinue
+
+    if (-not $wingetInstalled) {
+        Write-Host "Windows Package Manager (winget) is not installed. Installing now..."
+        # Download and install winget
+        Install-PackageProvider -Name "NuGet" -Confirm:$False -Force
+        Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+        Install-Script winget-install -Confirm:$False -Force
+        winget-install
+    }
+
+    # List of programs to install
+    $programs = @(
+        "Adobe.Acrobat.Reader.64-bit",
+        "Google.Chrome",
+        "Microsoft.Edge",
+        "VideoLAN.VLC",
+        "TheDocumentFoundation.LibreOffice",
+        "Microsoft.DotNet.Framework.DeveloperPack_4",
+        "TeamViewer.TeamViewer"
+    )
+
+    # Loop through the list of programs and install them using winget
+    foreach ($program in $programs) {
+        Write-Host "Installing $program..."
+        winget install -e --id $program --accept-source-agreements --accept-package-agreements
+        Write-Host "$program Sucessfully installed."
+    }
+
+    Write-Host "Custom Apps Installed."
+
+    ##########################################
 
     $path="HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel"
     $name="{20D04FE0-3AEA-1069-A2D8-08002B30309D}"
@@ -188,6 +219,22 @@ Function WinCustom {
     Show-Menu
 }
 
+
+Function update-apps {
+
+    # Check if winget is installed
+    $wingetInstalled = Get-Command winget -ErrorAction SilentlyContinue
+
+    if (-not $wingetInstalled) {
+        Write-Host "Windows Package Manager (winget) is not installed. Installing now..."
+        # Download and install winget
+        Install-PackageProvider -Name "NuGet" -Confirm:$False -Force
+        Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+        Install-Script winget-install -Confirm:$False -Force
+        winget-install
+    }
+        winget upgrade --all
+}
 Function Start-HDSentinel {
     Set-Location -Path "$scriptPath\src\files\hdsentinel_pro_portable"
     Start-Process -FilePath "HDSentinel.exe"
@@ -215,237 +262,3 @@ Function Start-PartitionWizzard {
 
     Show-Menu
 }
-
-Function SAPPS {
-    Clear-Host
-    Write-Host "..............................................."
-    Write-Host "Euro Discount - Euro Business Custom"
-    Write-Host "..............................................."
-    Write-Host ""
-    Write-Host "1 - Adobe-Reader"
-    Write-Host "2 - Google Chrome"
-    Write-Host "3 - Microsoft Edge"
-    Write-Host "4 - VLC"
-    Write-Host "5 - libreoffice"
-    Write-Host "6 - .NET Framework 4.8"
-    Write-Host "7 - TeamViewer"
-    Write-Host ""
-    Write-Host "0 - EXIT"
-    Write-Host ""
-
-    $choice = Read-Host "Type 1, 2, 3, or 4 then press ENTER"
-
-    switch ($choice) {
-        '1' { AdobeReaderMenu }
-        '2' { GoogleChromeMenu }
-        '3' { MicrosoftEdgeMenu }
-        '4' { VLCMenu }
-        '5' { LibreofficeMenu }
-        '6' { NetframeworkMenu }
-        '7' { TeamViewerMenu }
-        '0' { Show-Menu }
-        default { SAPPS }
-    }
-}
-
-Function AdobeReaderMenu {
-    Clear-Host
-    Write-Host "..............................................."
-    Write-Host "Euro Discount - Euro Business Custom"
-    Write-Host "..............................................."
-    Write-Host ""
-    Write-Host "Adobe Reader Verwijderen Of Installeren?"
-    Write-Host "1 - Installeren"
-    Write-Host "2 - Verwijderen"
-
-    $choice = Read-Host "Type 1, 2, 3, or 4 then press ENTER"
-
-    switch ($choice) {
-        '1' { AdobeReaderI }
-        '2' { AdobeReaderV }
-        default { AdobeReaderMenu }
-    }
-}
-
-Function GoogleChromeMenu {
-    Clear-Host
-    Write-Host "..............................................."
-    Write-Host "Euro Discount - Euro Business Custom"
-    Write-Host "..............................................."
-    Write-Host ""
-    Write-Host "Google Chrome Verwijderen Of Installeren?"
-    Write-Host "1 - Installeren"
-    Write-Host "2 - Verwijderen"
-
-    $choice = Read-Host "Type 1, 2, 3, or 4 then press ENTER"
-
-    switch ($choice) {
-        '1' { GoogleChromeI }
-        '2' { GoogleChromeV }
-        default { GoogleChromeMenu }
-    }
-}
-
-Function MicrosoftEdgeMenu {
-    Clear-Host
-    Write-Host "..............................................."
-    Write-Host "Euro Discount - Euro Business Custom"
-    Write-Host "..............................................."
-    Write-Host ""
-    Write-Host "Microsoft Edge Verwijderen Of Installeren?"
-    Write-Host "1 - Installeren"
-    Write-Host "2 - Verwijderen"
-
-    $choice = Read-Host "Type 1, 2, 3, or 4 then press ENTER"
-
-    switch ($choice) {
-        '1' { MicrosoftEdgeI }
-        '2' { MicrosoftEdgeV }
-        default { MicrosoftEdgeMenu }
-    }
-}
-
-Function VLCMenu {
-    Clear-Host
-    Write-Host "..............................................."
-    Write-Host "Euro Discount - Euro Business Custom"
-    Write-Host "..............................................."
-    Write-Host ""
-    Write-Host "VLC Verwijderen Of Installeren?"
-    Write-Host "1 - Installeren"
-    Write-Host "2 - Verwijderen"
-
-    $choice = Read-Host "Type 1, 2, 3, or 4 then press ENTER"
-
-    switch ($choice) {
-        '1' { VLCI }
-        '2' { VLCV }
-        default { VLCMenu }
-    }
-}
-
-Function LibreofficeMenu {
-    Clear-Host
-    Write-Host "..............................................."
-    Write-Host "Euro Discount - Euro Business Custom"
-    Write-Host "..............................................."
-    Write-Host ""
-    Write-Host "Libre Office Verwijderen Of Installeren?"
-    Write-Host "1 - Installeren"
-    Write-Host "2 - Verwijderen"
-
-    $choice = Read-Host "Type 1, 2, 3, or 4 then press ENTER"
-
-    switch ($choice) {
-        '1' { LibreofficeI }
-        '2' { LibreofficeV }
-        default { LibreofficeMenu }
-    }
-}
-
-Function NetframeworkMenu {
-    Clear-Host
-    Write-Host "..............................................."
-    Write-Host "Euro Discount - Euro Business Custom"
-    Write-Host "..............................................."
-    Write-Host ""
-    Write-Host ".Net Framework Verwijderen Of Installeren?"
-    Write-Host "1 - Installeren"
-    Write-Host "2 - Verwijderen"
-
-    $choice = Read-Host "Type 1, 2, 3, or 4 then press ENTER"
-
-    switch ($choice) {
-        '1' { NetframeworkI }
-        '2' { NetframeworkV }
-        default { NetframeworkMenu }
-    }
-}
-
-Function TeamViewerMenu {
-    Clear-Host
-    Write-Host "..............................................."
-    Write-Host "Euro Discount - Euro Business Custom"
-    Write-Host "..............................................."
-    Write-Host ""
-    Write-Host "Team Viewer Verwijderen Of Installeren?"
-    Write-Host "1 - Installeren"
-    Write-Host "2 - Verwijderen"
-
-    $choice = Read-Host "Type 1, 2, 3, or 4 then press ENTER"
-
-    switch ($choice) {
-        '1' { TeamViewerI }
-        '2' { TeamViewerV }
-        default { TeamViewerMenu }
-    }
-}
-
-Function AdobeReaderI {
-    powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\prog\adobereader.ps1"
-    pause
-    Show-Menu
-}
-
-Function AdobeReaderV {
-    powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\prog\verwijderen\adobereader.ps1"
-    pause
-    Show-Menu
-}
-
-Function MicrosoftEdgeI {
-    powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\prog\microsoftedge.ps1"
-    Show-Menu
-}
-
-Function MicrosoftEdgeV {
-    powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\prog\verwijderen\microsoftedge.ps1"
-    pause
-    Show-Menu
-}
-
-Function VLCI {
-    powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\prog\vlc.ps1"
-    Show-Menu
-}
-
-Function VLCV {
-    powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\prog\verwijderen\vlc.ps1"
-    pause
-    Show-Menu
-}
-
-Function LibreofficeI {
-    powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\prog\libreoffice.ps1"
-    Show-Menu
-}
-
-Function LibreofficeV {
-    powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\prog\verwijderen\libreoffice.ps1"
-    pause
-    Show-Menu
-}
-
-Function NetframeworkI {
-    powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\prog\netframework.ps1"
-    Show-Menu
-}
-
-Function NetframeworkV {
-    powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\prog\verwijderen\netframework.ps1"
-    pause
-    Show-Menu
-}
-
-Function TeamViewerI {
-    powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\prog\teamviewer.ps1"
-    Show-Menu
-}
-
-Function TeamViewerV {
-    powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\src\prog\verwijderen\teamviewer.ps1"
-    pause
-    Show-Menu
-}
-
-Show-Menu
