@@ -1,46 +1,4 @@
-# Check if running with administrative privileges
-$isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-
-# If not running as administrator, relaunch the script with elevated privileges
-if (-not $isAdmin) {
-    Write-Output "Requesting administrative permissions..."
-    Start-Process -FilePath PowerShell.exe -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
-    exit
-}
-
 $scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
-
-Function Show-Menu {
-    Clear-Host
-    Write-Host "..............................................."
-    Write-Host "Euro Discount - Euro Business Custom"
-    Write-Host "..............................................."
-    Write-Host ""
-    Write-Host "1 - Windows Custom"
-    Write-Host ""
-    Write-Host "2 - Apps Updaten"
-    Write-Host ""
-    Write-Host "3 - HDSentinel"
-    Write-Host "4 - CCleaner"
-    Write-Host "5 - Hardware Info"
-    Write-Host "6 - Partition Wizzard"
-    Write-Host "0 - EXIT"
-    Write-Host ""
-
-    $choice = Read-Host "Type 1, 2, 3, or 4... then press ENTER"
-
-    switch ($choice) {
-        '1' { WinCustom }
-        '2' { update-apps }
-        '3' { Start-HDSentinel }
-        '4' { Start-CCleaner }
-        '5' { Start-HardwareInfo }
-        '6' { Start-PartitionWizzard }
-        '0' { Exit }
-        default { Show-Menu }
-    }
-}
-
 Function WinCustom {
 
     # Check if winget is installed
@@ -236,29 +194,62 @@ Function update-apps {
         winget upgrade --all
 }
 Function Start-HDSentinel {
-    Set-Location -Path "$scriptPath\src\files\hdsentinel_pro_portable"
+    Set-Location -Path "$scriptPath\files\hdsentinel_pro_portable"
+    Remove-Item -Path "$scriptPath\files\hdsentinel_pro_portable\HDSData" -Recurse -Force -Confirm:$false
     Start-Process -FilePath "HDSentinel.exe"
 
     Show-Menu
 }
 
 Function Start-CCleaner {
-    Set-Location -Path "$scriptPath\src\files\ccsetup607"
+    Set-Location -Path "$scriptPath\files\ccsetup607"
     Start-Process -FilePath "CCleaner.exe"
 
     Show-Menu
 }
 
 Function Start-HardwareInfo {
-    Set-Location -Path "$scriptPath\src\files\Hardware-Info"
+    Set-Location -Path "$scriptPath\files\Hardware-Info"
     Start-Process -FilePath "HWiNFO64.exe"
 
     Show-Menu
 }
 
 Function Start-PartitionWizzard {
-    Set-Location -Path "$scriptPath\src\files\Partition-Wizard"
+    Set-Location -Path "$scriptPath\files\Partition-Wizard"
     Start-Process -FilePath "partitionwizard.exe"
 
     Show-Menu
 }
+
+Function Show-Menu {
+    Clear-Host
+    Write-Host "..............................................."
+    Write-Host "Euro Discount - Euro Business Custom"
+    Write-Host "..............................................."
+    Write-Host ""
+    Write-Host "1 - Windows Custom"
+    Write-Host ""
+    Write-Host "2 - Apps Updaten"
+    Write-Host ""
+    Write-Host "3 - HDSentinel"
+    Write-Host "4 - CCleaner"
+    Write-Host "5 - Hardware Info"
+    Write-Host "6 - Partition Wizzard"
+    Write-Host "0 - EXIT"
+    Write-Host ""
+
+    $choice = Read-Host "Type 1, 2, 3, or 4... then press ENTER"
+
+    switch ($choice) {
+        '1' { WinCustom }
+        '2' { update-apps }
+        '3' { Start-HDSentinel }
+        '4' { Start-CCleaner }
+        '5' { Start-HardwareInfo }
+        '6' { Start-PartitionWizzard }
+        '0' { Exit }
+        default { Show-Menu }
+    }
+}
+Show-Menu
